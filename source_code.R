@@ -6,6 +6,10 @@ library(ggplot2)
 library(caret)
 #install.packages("corrplot")
 library(corrplot)
+#install.packages("rmarkdown")
+#install.packages("knitr")
+library(rmarkdown)
+library(knitr)
 
 #data load
 
@@ -22,7 +26,7 @@ train_data <- train_data[train_data$new_window=='no',]
 colSums(is.na(train_data))
 
 train_data <- train_data[!colSums(is.na(train_data)|train_data ==0) == nrow(train_data)]
-colSums(train_data)
+#colSums(train_data)
 head(train_data)
 dim(train_data)
 
